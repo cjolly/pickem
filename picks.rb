@@ -14,13 +14,13 @@ module PickEm
       parse_espn_projections
     end
 
-    def to_s
-      @matchups.collect {|m| m.to_s }.join("\n")
+    def sorted
+      @matchups.sort_by {|m| [m.home.percent, m.away.percent].max }.reverse
     end
 
-    def sorted
-      sorted = @matchups.sort_by {|m| [m.home.percent, m.away.percent].max }.reverse
-      sorted.collect {|m| m.to_s }.join("\n")
+    def suggestions
+      sorted.each_with_index {|m, i| puts "#{16-i} - #{m.favorite}"}
+      #sorted.collect {|m| m.favorite.to_s }.join("\n")
     end
 
     private
@@ -56,8 +56,12 @@ module PickEm
       "#{@home} at #{@away}"
     end
 
-    def <=>(other)
-      []
+    def favorite
+      if @home.percent >= @away.percent
+        @home
+      else
+        @away
+      end
     end
   end
 
