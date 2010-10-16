@@ -18,19 +18,27 @@ module PickEm
       @matchups.collect {|m| m.to_s }.join("\n")
     end
 
-    def parse_espn_projections
-      espn_projections_page = "http://insider.espn.go.com/nfl/projections?weekNumber=#{@week}&seasonType=2&seasonYear=2010"
-
-      doc = Nokogiri::HTML(open(espn_projections_page))
-      scripts = doc.search('#my-teams-table script')
-
-      accuscore_xml_links = scripts.collect{|s| s.to_s.match(/XMLURL=([^\&]*)/)[1] }
-      accuscore_predictions = accuscore_xml_links.collect {|l| Nokogiri::XML(open(l)) }
-
-      accuscore_predictions.each_with_index do |matchup, i|
-        @matchups << PickEm::Matchup.new(matchup.search('//team'))
-      end
+    def sorted
+      sorted = @matchups.sort_by {|m| [m.home.percent, m.away.percent].max }.reverse
+      sorted.collect {|m| m.to_s }.join("\n")
     end
+
+    private
+
+      def parse_espn_projections
+        espn_projections_page = "http://insider.espn.go.com/nfl/projections?weekNumber=#{@week}&seasonType=2&seasonYear=2010"
+
+        doc = Nokogiri::HTML(open(espn_projections_page))
+        scripts = doc.search('#my-teams-table script')
+
+        accuscore_xml_links = scripts.collect{|s| s.to_s.match(/XMLURL=([^\&]*)/)[1] }
+        accuscore_predictions = accuscore_xml_links.collect {|l| Nokogiri::XML(open(l)) }
+
+        accuscore_predictions.each_with_index do |matchup, i|
+          @matchups << PickEm::Matchup.new(matchup.search('//team'))
+        end
+      end
+
   end
 
   class Matchup
@@ -47,6 +55,10 @@ module PickEm
     def to_s
       "#{@home} at #{@away}"
     end
+
+    def <=>(other)
+      []
+    end
   end
 
   class Team
@@ -55,7 +67,7 @@ module PickEm
       @name = nokogiri_node['name']
       @comm = nokogiri_node['comm']
       @home = nokogiri_node['home']
-      @percent = nokogiri_node['percent']
+      @percent = nokogiri_node['percent'].to_f
     end
 
     def to_s
