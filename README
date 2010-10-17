@@ -1,4 +1,7 @@
-Taps into ESPN Accuscore's unintentional API to generate a set of suggestions for NFL PickEm leagues
+Suggestions for NFL PickEm leagues based on ESPN AccuScore
+
+nfl_pickem Taps into ESPN's unintentional AccuScore API and generates a set of suggestions based on AccuScore's game simulation odds percentages.
+http://insider.espn.go.com/nfl/projections
 
 Week 6 example:
 → ruby nfl_pickem.rb WEEK=6
