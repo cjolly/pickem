@@ -1,5 +1,5 @@
 module PickEm
-  class Matchup
+  class Game
     attr_accessor :teams, :home, :away
     def initialize(nokogiri_nodes)
       @teams = []

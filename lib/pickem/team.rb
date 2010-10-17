@@ -9,7 +9,7 @@ module PickEm
     end
 
     def to_s
-      "#{name} (#{percent})"
+      "#{name} (#{percent}%)"
     end
   end
 end
