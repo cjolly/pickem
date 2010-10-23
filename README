@@ -4,7 +4,8 @@ nfl_pickem Taps into ESPN's unintentional AccuScore API and generates a set of s
 http://insider.espn.go.com/nfl/projections
 
 Week 6 example:
-→ ruby nfl_pickem.rb WEEK=6
+→ bundle install
+→ bundle exec ruby nfl_pickem.rb WEEK=6
 Games:
 CHI (74.6%) at SEA (25.3%)
 GB (62.9%) at MIA (37.0%)
