@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Content-Type: text/xml
+Last-Modified: Sat, 23 Oct 2010 21:05:23 GMT
+Accept-Ranges: bytes
+Server: Microsoft-IIS/6.0
+P3P: CP="CAO DSP COR CURa ADMa DEVa TAIa PSAa PSDa IVAi IVDi CONi OUR SAMo OTRo BUS PHY ONL UNI PUR COM NAV INT DEM CNT STA PRE"
+From: EGW06
+Cache-Expires: Sun, 24 Oct 2010 02:01:10 GMT
+Content-Length: 516
+Cache-Control: max-age=239
+Date: Sun, 24 Oct 2010 02:18:59 GMT
+Connection: keep-alive
+
+<?xml version="1.0" encoding="utf-8"?>        <xml>            <banner imgAddress="images/flash/statshark.jpg" linkURL="http://www.statshark.com/"></banner>            <team name="NYG" percent="36.9" home="0" comm="Giants">                <player name="Giants" ps="Average Score" psid="TM" mm="" prc="22.2" />            </team>            <team name="DAL" percent="62.9" home="1" comm="Cowboys">                <player name="Cowboys" ps="Average Score" psid="TM" mm="" prc="26.3" />            </team>        </xml>

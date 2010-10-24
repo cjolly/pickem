@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Content-Type: text/xml
+Last-Modified: Sat, 23 Oct 2010 21:05:20 GMT
+Accept-Ranges: bytes
+Server: Microsoft-IIS/6.0
+P3P: CP="CAO DSP COR CURa ADMa DEVa TAIa PSAa PSDa IVAi IVDi CONi OUR SAMo OTRo BUS PHY ONL UNI PUR COM NAV INT DEM CNT STA PRE"
+From: ESPN102
+Cache-Expires: Sun, 24 Oct 2010 01:59:44 GMT
+Content-Length: 514
+Cache-Control: max-age=257
+Date: Sun, 24 Oct 2010 02:18:57 GMT
+Connection: keep-alive
+
+<?xml version="1.0" encoding="utf-8"?>        <xml>            <banner imgAddress="images/flash/statshark.jpg" linkURL="http://www.statshark.com/"></banner>            <team name="PHI" percent="43.3" home="0" comm="Eagles">                <player name="Eagles" ps="Average Score" psid="TM" mm="" prc="20.0" />            </team>            <team name="TEN" percent="56.6" home="1" comm="Titans">                <player name="Titans" ps="Average Score" psid="TM" mm="" prc="22.5" />            </team>        </xml>
