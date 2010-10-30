@@ -11,4 +11,13 @@ Cache-Control: max-age=258
 Date: Sun, 24 Oct 2010 02:18:56 GMT
 Connection: keep-alive
 
-<?xml version="1.0" encoding="utf-8"?>        <xml>            <banner imgAddress="images/flash/statshark.jpg" linkURL="http://www.statshark.com/"></banner>            <team name="CIN" percent="38.8" home="0" comm="Bengals">                <player name="Bengals" ps="Average Score" psid="TM" mm="" prc="21.3" />            </team>            <team name="ATL" percent="61.1" home="1" comm="Falcons">                <player name="Falcons" ps="Average Score" psid="TM" mm="" prc="25.1" />            </team>        </xml>
+<?xml version="1.0" encoding="utf-8"?>        
+<xml>            
+  <banner imgAddress="images/flash/statshark.jpg" linkURL="http://www.statshark.com/"></banner>            
+  <team name="CIN" percent="38.8" home="0" comm="Bengals">                
+    <player name="Bengals" ps="Average Score" psid="TM" mm="" prc="21.3" />            
+  </team>            
+  <team name="ATL" percent="61.1" home="1" comm="Falcons">                
+    <player name="Falcons" ps="Average Score" psid="TM" mm="" prc="25.1" />            
+  </team>     
+</xml>

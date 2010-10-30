@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'lib')
+$LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'lib/pickem')
+require 'nfl_pickem'
+
+week = PickEm::Week.new(ENV['WEEK'])
+puts "Games:"
+puts week.games
+puts "-" * 80
+puts "Suggestions:"
+puts week.suggestions
