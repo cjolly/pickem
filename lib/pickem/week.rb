@@ -28,7 +28,7 @@ module PickEm
     private
 
       def parse_espn_projections
-        espn_projections_page = "http://insider.espn.go.com/nfl/projections?weekNumber=#{@week}&seasonType=2&seasonYear=2010"
+        espn_projections_page = "http://insider.espn.go.com/nfl/projections?week=#{@week}"
 
         doc = Nokogiri::HTML(open(espn_projections_page))
         scripts = doc.search('#my-teams-table script')
