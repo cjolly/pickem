@@ -1,4 +1,5 @@
 source :rubygems
+gem 'thor'
 gem 'nokogiri'
 
 group :test do
