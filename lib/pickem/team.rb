@@ -1,4 +1,4 @@
-module PickEm
+module Pickem
   class Team
     attr_accessor :name, :comm, :home, :percent
     def initialize(nokogiri_node)

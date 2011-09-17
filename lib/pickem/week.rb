@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 
-module PickEm
+module Pickem
   # espn_picks_page = 'http://espn.go.com/nfl/picks'
   # espn_projections_page = "http://insider.espn.go.com/nfl/projections?weekNumber=5&seasonType=2&seasonYear=2010"
 
@@ -37,7 +37,7 @@ module PickEm
         accuscore_predictions = accuscore_xml_links.collect {|l| Nokogiri::XML(open(l)) }
 
         accuscore_predictions.each_with_index do |game, i|
-          @games << PickEm::Game.new(game.search('//team'))
+          @games << Pickem::Game.new(game.search('//team'))
         end
       end
 

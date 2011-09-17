@@ -1,8 +1,4 @@
-source :rubygems
-gem 'thor'
-gem 'nokogiri'
+source "http://rubygems.org"
 
-group :test do
-  gem 'rspec'
-  gem 'fakeweb'
-end
+# Specify your gem's dependencies in pickem.gemspec
+gemspec

@@ -1,8 +1,14 @@
+PATH
+  remote: .
+  specs:
+    pickem (0.0.1)
+      nokogiri
+      thor
+
 GEM
   remote: http://rubygems.org/
   specs:
     diff-lcs (1.1.3)
-    fakeweb (1.3.0)
     nokogiri (1.5.0)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
@@ -18,7 +24,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  fakeweb
-  nokogiri
+  pickem!
   rspec
-  thor

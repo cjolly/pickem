@@ -1,4 +1,4 @@
-Suggestions for NFL PickEm leagues based on ESPN AccuScore
+Suggestions for NFL Pickem leagues based on ESPN AccuScore
 
 nfl_pickem Taps into ESPN's unintentional AccuScore API and generates a set of suggestions based on AccuScore's game simulation odds percentages.
 http://insider.espn.go.com/nfl/projections
