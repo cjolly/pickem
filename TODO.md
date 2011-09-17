@@ -1,5 +1,6 @@
 # TODO
 
+* Auto-detect week
 * Team Records
 * Previous game outcome
 * Win/Loss streak
