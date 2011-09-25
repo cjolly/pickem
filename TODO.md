@@ -3,6 +3,7 @@
 * Team Records
 * Previous game outcome
 * Win/Loss streak
+* Link to nfl.com matchup page
 
 ## More Sources
 
