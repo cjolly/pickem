@@ -4,6 +4,7 @@
 * Team Records
 * Previous game outcome
 * Win/Loss streak
+view-source:http://m.nfl.com/standings/
 
 ## More Sources
 

@@ -13,6 +13,10 @@ module Pickem
       parse_espn_projections
     end
 
+    def self.current_week
+      Time.now.to_date.cweek - start_of_season_week + 1
+    end
+
     def sorted
       @games.sort_by {|g| [g.home.percent, g.away.percent].max }.reverse
     end
@@ -26,6 +30,10 @@ module Pickem
     end
 
     private
+
+      def self.start_of_season_week
+        36 # Start of the 2011 season
+      end
 
       def parse_espn_projections
         espn_projections_page = "http://insider.espn.go.com/nfl/projections?week=#{@week}"
