@@ -21,5 +21,9 @@ module Pickem
         @away
       end
     end
+
+    def underdog
+      favorite.name == away.name ? home : away
+    end
   end
 end

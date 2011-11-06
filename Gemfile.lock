@@ -3,6 +3,7 @@ PATH
   specs:
     pickem (0.0.1)
       nokogiri
+      terminal-table
       thor
 
 GEM
@@ -18,6 +19,7 @@ GEM
     rspec-expectations (2.6.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.6.0)
+    terminal-table (1.4.3)
     thor (0.14.6)
 
 PLATFORMS
