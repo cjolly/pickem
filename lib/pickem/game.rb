@@ -11,7 +11,7 @@ module Pickem
     end
 
     def to_s
-      "#{@home} at #{@away}"
+      "    #{@home} at #{@away}"
     end
 
     def favorite

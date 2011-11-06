@@ -20,7 +20,7 @@ module Pickem
     def suggestions
       suggestions = []
       sorted.each_with_index do |g, i|
-        suggestions << "#{16-i} - #{g.favorite}"
+        suggestions << "    #{16-i} - #{g.favorite}"
       end
       suggestions
     end
