@@ -7,6 +7,7 @@
 
 ## More Sources
 
+* http://fanrankings.nfl.com/results
 * http://sports.yahoo.com/nfl/pickem
 * http://sports.yahoo.com/nfl/odds
 * http://www.nfl.com/more/gamedaypickem
