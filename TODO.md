@@ -8,6 +8,7 @@
 
 ## More Sources
 
+# http://www.nfl.com/schedules/2012/REG1
 * http://fanrankings.nfl.com/results
 * http://sports.yahoo.com/nfl/pickem
 * http://sports.yahoo.com/nfl/odds
