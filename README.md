@@ -1,4 +1,4 @@
-*DISCLAIMER: This is purely an academic exercise is gem building and testing. **Don't use it for anything.** You should not gamble. Unless you want to. In which case, you definitely should not use this library for suggestions. Unless you're crazy. In which case usage instructions are below.*
+*DISCLAIMER: This is purely an academic exercise is gem building and testing. __Don't use it for anything.__ You should not gamble. Unless you want to. In which case, you definitely should not use this library for suggestions. Unless you're crazy. In which case usage instructions are below.*
 # NFL Pickem suggestions by week
 
 `thor pickem:picks:for_week 2`
