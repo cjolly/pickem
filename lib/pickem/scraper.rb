@@ -1,9 +1,36 @@
 require 'open-uri'
 require 'nokogiri'
+require 'terminal-table'
+
+class CBSOddsScraper
+  attr_accessor :games, :doc
+
+  def initialize
+    @games = []
+    scrape_cbs_odds_page
+  end
+
+  def go
+    tables = @doc.css('table.data')
+    tables.each do |table|
+      rows = table.css('.row1')
+      home_team = rows.first.css('a')[0]['href'].split('/')[4]
+      away_team = rows.last.css('a')[0]['href'].split('/')[4]
+      current_line = rows.last.css('td')[3].content
+      @games << [home_team, away_team, current_line]
+    end
+    puts Terminal::Table.new :rows => @games.sort_by {|game| game[2].to_f.abs}.reverse
+  end
+
+  private
+
+  def scrape_cbs_odds_page
+    @doc = Nokogiri::HTML(open('http://www.cbssports.com/nfl/odds'))
+  end
+end
 
 class Scraper
   PRO_FOOTBALL_REFERENCE_URL = 'http://www.pro-football-reference.com/years/2012/games.htm'
-
   def self.go
     doc = Nokogiri::HTML(open(PRO_FOOTBALL_REFERENCE_URL))
 
