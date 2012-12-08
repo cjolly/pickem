@@ -4,18 +4,34 @@ require 'nokogiri'
 module Pickem
   module Scrapers
     class CBSSports
-      attr_reader :source, :games, :doc, :sorted_games
+      attr_reader :source, :games, :doc, :picks
 
       def initialize
         @source = 'http://www.cbssports.com/nfl/odds'
         @games = []
-        scrape_cbs_odds_page
-        parse
+      end
+
+      def self.scrape!
+        new.scrape!
       end
 
       def to_s
-        sorted
+        picks
       end
+
+      def scrape!
+        unless @doc
+          @doc = Nokogiri::HTML(open(source))
+          parse
+        end
+        return self
+      end
+
+      def picks
+        @games.sort_by {|game| game[2].to_f.abs}.reverse
+      end
+
+      private
 
       def parse
         tables = @doc.css('table.data')
@@ -33,16 +49,6 @@ module Pickem
 
           @games << [home_team, away_team, current_line]
         end
-      end
-
-      def sorted_games
-        @games.sort_by {|game| game[2].to_f.abs}.reverse
-      end
-
-      private
-
-      def scrape_cbs_odds_page
-        @doc ||= Nokogiri::HTML(open(source))
       end
     end
   end

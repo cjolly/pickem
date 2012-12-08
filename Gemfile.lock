@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pickem (0.0.1)
+    pickem (0.1.0)
       nokogiri
       terminal-table
 

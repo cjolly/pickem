@@ -2,4 +2,4 @@
 
 require './lib/pickem'
 
-Pickem.print_picks
+puts Pickem.results
