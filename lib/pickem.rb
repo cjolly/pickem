@@ -11,7 +11,7 @@ module Pickem
   def self.results
     scraper = Scrapers::CBSSports.scrape!
     table = Terminal::Table.new({
-      title: "Week #{current_week}\n#{scraper.source}",
+      title: "Week #{current_week}\n#{Time.now}\n#{scraper.source}",
       headings: ['Away', 'Home', 'Current Line'],
       rows: scraper.picks
     })
