@@ -8,7 +8,7 @@
 
 ## More Sources
 
-# http://www.nfl.com/schedules/2012/REG1
+* http://www.nfl.com/schedules/2012/REG1
 * http://fanrankings.nfl.com/results
 * http://sports.yahoo.com/nfl/pickem
 * http://sports.yahoo.com/nfl/odds
@@ -19,3 +19,7 @@
 * http://www.advancednflstats.com/
 * http://www.footballoutsiders.com/stats/teameff
 * http://www.wolframalpha.com/resource/nfl.html
+
+Andrew's suggestion:
+* http://www.vegasinsider.com/nfl/odds/las-vegas/
+* 
