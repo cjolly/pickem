@@ -21,13 +21,9 @@ module Pickem
   end
 
   def self.current_week(today = Date.today)
-    week_of_year = today.cweek
-    if today.cweek < FIRST_WEEK_OF_SEASON
-      week = today.cweek + 52 - FIRST_WEEK_OF_SEASON
-    else
-      week = today.cweek - FIRST_WEEK_OF_SEASON
-    end
-    week += 1 unless today.monday?
+    week = today.cweek - FIRST_WEEK_OF_SEASON
+    week += 52 if week < 0
+    week += 1  unless today.monday?
     week
   end
 end
