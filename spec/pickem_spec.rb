@@ -21,5 +21,9 @@ describe Pickem do
     it "tuesday becomes first day of the next week" do
       Pickem.current_week(Date.new(2012, 12, 11)).should == 15
     end
+
+    it "handles weeks that extend into the new year" do
+      Pickem.current_week(Date.new(2013, 1, 5)).should == 18
+    end
   end
 end
