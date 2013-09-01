@@ -6,7 +6,7 @@ require 'terminal-table'
 require 'date'
 
 module Pickem
-  FIRST_WEEK_OF_SEASON = 36
+  FIRST_WEEK_OF_SEASON = 35
 
   def self.results
     scraper = Scrapers::CBSSports.scrape!

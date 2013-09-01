@@ -13,16 +13,12 @@ module Pickem::Scrapers
         scraper.games.size.should == 16
       end
 
-      it "should rank MIA @ SF as the highest weighted game of the week" do
-        scraper.picks.first.should == ['MIA', '*SF', '-10.5']
+      it "should rank NE @ BUF as the highest weighted game of the week" do
+        scraper.picks.first.should == ["*NE", "BUF", "+10.5"]
       end
 
-      it "should rank BAL @ WAS as the lowest weighted game of the week" do
-        scraper.picks.last.should == ['BAL', '*WAS', '-2.5']
-      end
-
-      it "should pick the away team if the line is positive" do
-        scraper.picks[1].first.should == '*DEN'
+      it "should rank MIA @ CLE as the lowest weighted game of the week" do
+        scraper.picks.last.should == ["*MIA", "CLE", "PK"]
       end
     end
   end
