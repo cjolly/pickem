@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Pickem do
+  before(:each) { stub_const('Pickem::FIRST_WEEK_OF_SEASON', 36)}
+
   context ".results", vcr: {cassette_name: "cbs_sports"} do
     it "returns a table of results" do
       table = Pickem.results
